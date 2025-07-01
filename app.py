@@ -4,7 +4,7 @@ import requests
 
 # --- Configuration ---
 # All this code is related to the user interface.
-API_URL = "https://xgboost-house-price-predictor.onrender.com"
+API_URL = "https://xgboost-house-price-predictor.onrender.com/predict"
 #API_HOST = os.getenv("API_HOST", "127.0.0.1")
 #API_PORT = 8088  
 #API_URL = f"http://{API_HOST}:{API_PORT}/predict"
