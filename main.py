@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 import pandas as pd
 import joblib
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
 
 model = joblib.load("xgboost_original.pkl")
 preprocessor = joblib.load("preprocessor.pkl")
