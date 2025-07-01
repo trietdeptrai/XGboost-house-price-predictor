@@ -16,7 +16,25 @@ class InputData(BaseModel):
     Access_road: float = Field(alias="Access road")   
     Legal_status: str = Field(alias="Legal status") 
 
-app = FastAPI()
+app = FastAPI(title="House Price Prediction API",
+    description="An API to predict house prices using a pre-trained XGBoost model.",
+    version="1.0"
+)
+
+origins = [
+    "*",  # For development, allowing all origins.
+    # For production, you would restrict this to your Streamlit app's URL:
+    # "https://your-streamlit-app-name.streamlit.app"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"], # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"], # Allows all headers
+)
+
 
 @app.post("/predict")
 def predict(data: InputData):
