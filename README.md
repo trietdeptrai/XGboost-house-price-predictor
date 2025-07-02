@@ -62,6 +62,8 @@ Use the web interface to get real-time house price predictions:
 👉 Streamlit App:https://xgboost-house-price-predictor-mpupw2sfci8fankzjjnckp.streamlit.app/
 
 **🔌 API Endpoint**
+(I host my API on the Render free plan, which means it will turn off after a period of inactivity, so this is for educational purposes only.) I have uploaded my model in this repo, you can download it to try if you want
+
 Predict prices programmatically using a RESTful API:
 Endpoint: https://xgboost-house-price-predictor.onrender.com/predict
 Method: POST
